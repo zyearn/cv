@@ -1,4 +1,4 @@
-default: zjs-cn.pdf zjs-en.pdf resume.pdf
+all: zjs-en.pdf
 
 resume.pdf: zjs-en.pdf
 	cp $^ resume.pdf
@@ -11,3 +11,6 @@ zjs-en.pdf: zjs-en.tex
 
 clean:
 	rm -rf *.pdf
+
+default: zjs-cn.pdf zjs-en.pdf resume.pdf
+
