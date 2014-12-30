@@ -22,6 +22,7 @@
 *.snm
 *.vrb
 *.bak
+*.swp
 
 auto/
 .DS_Store
