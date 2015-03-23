@@ -12,5 +12,5 @@ zjs-en.pdf: zjs-en.tex
 clean:
 	rm -rf *.pdf
 
-default: zjs-cn.pdf zjs-en.pdf resume.pdf
+default: zjs-cn.pdf zjs-en.pdf
 
