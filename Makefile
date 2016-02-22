@@ -10,7 +10,7 @@ zjs-en.pdf: zjs-en.tex
 	xelatex $^
 
 clean:
-	rm -rf *.pdf
+	rm -rf *.pdf *.aux *.log *.bbl *.blg *.out
 
 default: zjs-cn.pdf zjs-en.pdf
 
