@@ -1,4 +1,4 @@
-all: zjs-en.pdf
+all: zjs-en.pdf zjs-cn.pdf
 
 resume.pdf: zjs-en.pdf
 	cp $^ resume.pdf
