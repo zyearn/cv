@@ -131,9 +131,9 @@
 {
 \begin{itemize}
     \item \url{https://github.com/apache/incubator-brpc}
-    \item Implement HTTP/2.0, grpc protocol, rtmp-protocol, redis-protocol, circuit breaker, several naming services and so on.
+    \item Implement HTTP/2, grpc protocol, rtmp protocol, redis protocol, circuit breaker, several naming services and so on.
     \item Introduced brpc to several product teams. Until now more than one million services at Baidu use brpc in their product environments, improving performance from 15\% to 70\% in different cases.
-    \item Payed great efforts to make the framework easier to use and be better at performance(e.g., improved 3x in Http/2 within 3 weeks and 5x in redis-protocol within 2 weeks).
+    \item Payed great efforts to make the framework easier to use and be better at performance(e.g., improved 3x in Http/2 within 3 weeks and 5x in redis protocol within 2 weeks).
     \item Made our first apache release recently by resolving lots of problems.
 \end{itemize}
 }
@@ -159,9 +159,9 @@
 {
 Indexer is a general-purpose index service implementing complicated read such as inverted index ranked by scores. It can be used in scenarios like search and recommendation.
 \begin{itemize}
-    \item Implement redis-protocol so that user can visit indexer easily in any situations such as scripts, program and command-line.
-    \item Implement a data definition language used to define index supporting data source and format, and a data query language used to query index supporting join, where clause, mapping and etc.
-    \item Implement realtime update to index so that there is no need to reload from whole snapshot.
+    \item Implement redis protocol so that user can visit indexer easily in any situations such as scripts, program and command-line.
+    \item Implement a data definition language to define and create index, and a data query language to query index, supporting join, where clause, mapping, aggregation and etc.
+    \item Implement realtime update to index so that there is no need to reload from new snapshot.
     \item Implement data loaders that load data from different kinds of source and data parser that parse data in different format.
 \end{itemize}
 }
