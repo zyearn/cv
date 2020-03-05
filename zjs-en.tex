@@ -12,7 +12,7 @@
 \usepackage[scale=0.8]{geometry}
 \recomputelengths                             % required when changes are made to page layout lengths
 
-% personal data
+% personal da5a
 \firstname{Jiashun}
 \familyname{Zhu}
 \title{Curriculum Vitae}
@@ -35,20 +35,16 @@
 
 \section{Education}
 %%\cventry{2010--Present}{Undergraduate}{Shanghai JiaoTong University}{expected 2014}{}
-\cventry{2010--2014}{Undergraduate}{Shanghai JiaoTong University}{}{}
-{
-\begin{itemize}
-\item \textbf{Major}: Computer Science and Engineering
-\item \textbf{Rank}: 21/122
+\cventry{2010.9--2014.6}{Bachelor in Computer Science}{Shanghai JiaoTong University}{}{}{}
+%\begin{itemize}
+%\item \textbf{Major}: Computer Science and Engineering
+%\item \textbf{Rank}: 21/122
 %\item \textbf{MajorCourse/Score}: Algorithm and Complexity(96), Discrete Mathematics(98), Operating System(93), Compiler(90), Computer architecture(91), Computer Organization Experiment(92), C++ programming(91), Linear Algebra(94), Artificial Intelligence(93), Computer Network(92), Database(90) and so on.\\
-\end{itemize}
-}
-\cventry{2014--present}{Graduate}{Shanghai JiaoTong University}{}{}
-{
-\begin{itemize}
-\item \textbf{Major}: Computer Science and Engineering
-\end{itemize}
-}
+%\end{itemize}
+\cventry{2014.9--2017.2}{Master in System Software}{Shanghai JiaoTong University}{}{}{}
+%\begin{itemize}
+%\item \textbf{Major}: Computer Science and Engineering
+%\end{itemize}
 
 %\section{Master thesis}
 
@@ -57,13 +53,12 @@
 %\cvline{supervisors}{Supervisors}
 %\cvline{description}{\small Short thesis abstract}
 
-
 \section{Community}
 %\cventry{TechBlog}{\href{http://blog.csdn.net/Zyearn}}{}{}{}{}
 %\cventry{MindBlog}{\url{http://zyearn.github.io}}{}{}{}{}
-\cventry{Blog}{\url{http://www.lifeofzjs.com}}{}{}{}{}
-%\cventry{OldBlog}{http://blog.csdn.net/Zyearn}{}{}{}{}
 \cventry{Github}{\url{https://github.com/zyearn}}{}{}{}{}
+\cventry{Blog}{\url{https://zyearn.github.io}}{My tech blog(Chinese)}{}{}{}
+%\cventry{OldBlog}{http://blog.csdn.net/Zyearn}{}{}{}{}
 
 %\section{Academic Experience}
 %\cventry{2013.9--now}{Research Assistant}{Reliable adaptive distributed systems laboratory}{}{}
@@ -74,106 +69,206 @@
 %\end{itemize}
 %}
 
-
-\section{Internship Experience}
+%\section{Internship Experience}
 %SSG STO Big Data Technology
 %Intel Asia-Pacific Research & Development Ltd.
 
-\cventry{2016.6--now}{Shanghai Qiniu Technology Co., Ltd}{}{}{}
+%\cventry{2016.6--now}{Shanghai Qiniu Technology Co., Ltd}{}{}{}
+%{
+%\begin{itemize}
+%\item position: server-side engineer\\
+%I participate in the design and implementation of the system in core product line(Fusion CDN).
+%\end{itemize}
+%}
+%
+%\cventry{2015.6--2015.9}{Tencent Technology (Shenzhen) Co., Ltd}{}{}{}
+%{
+%\begin{itemize}
+%\item position: Interactive Entertainment Group/Aurora Studios/game server-side intern engineer\\
+%    I completed a game server system designed for intern engineers, which involves user login, simple user interactions, user logout and user data persistency. 
+%\end{itemize}
+%}
+%
+%\cventry{2014.6--2014.12}{INESA Holding Group R\&D Center}{}{}{}
+%{
+%\begin{itemize}
+%\item Position: Front-end/Back-end intern software engineer\\
+%I was involved in the development of back-end server using NodeJS and front-end parts using JavaScript/HTML/CSS.
+%\end{itemize}
+%}
+%
+%\cventry{2013.8--2014.2}{Shanghai YiTu Network Technology Co., Ltd}{}{}{}
+%{
+%\begin{itemize}
+%\item Position: Linux C++ intern software engineer\\
+%I was involved in the architecture design and implementation of back-end services. I learned many other valuable things other than technical skills, e.g., how to cooperate with others, what is important in work and so on.
+%\end{itemize}
+%}
+
+\section{Work Experience}
+\cventry{2018.8--present}{Software Engineer at Bilibili}{Infrastructure}{}{}{}
+\cventry{2017.2--2018.8}{Software Engineer at Baidu}{Clould Computing}{Infrastructure}{}{}
+\cventry{2016.6--2016.9}{Summer Internship at Shanghai Qiniu Technology}{}{}{}{}
+\cventry{2015.6--2015.9}{Summer Internship at Tencent}{}{}{}{}
+\cventry{2013.8--2014.2}{Summer Internship at YITU Technology}{}{}{}{}
+
+\section{Main Project Experience}
+
+%brpc
+%indexer?
+%boss
+%taishan
+%media-server
+%ab test
+%zaver
+%Wamalloc
+
+\cventry{2017.2--present}
+{apache brpc}
+{industrial-grade RPC framework}
+{initial commiter}
+{Baidu}
 {
 \begin{itemize}
-\item position: server-side engineer\\
-I participate in the design and implementation of the system in core product line(Fusion CDN).
+    \item \url{https://github.com/apache/incubator-brpc}
+    \item Implement HTTP/2.0, grpc protocol, rtmp-protocol, redis-protocol, circuit breaker, several naming services and so on.
+    \item Introduced brpc to several product teams. Until now more than one million services at Baidu use brpc in their product environments, improving performance from 15\% to 70\% in different cases.
+    \item Payed great efforts to make the framework easier to use and be better at performance(e.g., improved 3x in Http/2 within 3 weeks and 5x in redis-protocol within 2 weeks).
+    \item Made our first apache release recently by resolving lots of problems.
 \end{itemize}
 }
 
-\cventry{2015.6--2015.9}{Tencent Technology (Shenzhen) Co., Ltd}{}{}{}
+\cventry{2019.6--present}
+{taishan}
+{a key-value persistent storage}
+{Bilibili}
+{}
 {
 \begin{itemize}
-\item position: Interactive Entertainment Group/Aurora Studios/game server-side intern engineer\\
-    I completed a game server system designed for intern engineers, which involves user login, simple user interactions, user logout and user data persistency. 
+    \item Built a key-value persistent storage using raft to relicate data and metadata.
+    \item Built a c++ rich client including communicating with metaservers, data nodes and doing retries for users automatically.
+    \item Built a proxy that compatible with redis client, so that new features in server can be used directly without upgrading client.
 \end{itemize}
 }
 
-\cventry{2014.6--2014.12}{INESA Holding Group R\&D Center}{}{}{}
+\cventry{2019.10--present}
+{indexer}
+{Bilibili}
+{}
+{}
 {
+Indexer is a general-purpose index service implementing complicated read such as inverted index ranked by scores. It can be used in scenarios like search and recommendation.
 \begin{itemize}
-\item Position: Front-end/Back-end intern software engineer\\
-I was involved in the development of back-end server using NodeJS and front-end parts using JavaScript/HTML/CSS.
+    \item Implement redis-protocol so that user can visit indexer easily in any situations such as scripts, program and command-line.
+    \item Implement a data definition language used to define index supporting data source and format, and a data query language used to query index supporting join, where clause, mapping and etc.
+    \item Implement realtime update to index so that there is no need to reload from whole snapshot.
+    \item Implement data loaders that load data from different kinds of source and data parser that parse data in different format.
 \end{itemize}
 }
 
-\cventry{2013.8--2014.2}{Shanghai YiTu Network Technology Co., Ltd}{}{}{}
+%\cventry{2019.7--present}
+%{bos}
+%{bilibili object storage}
+%{}
+%{}
+%{
+%\begin{itemize}
+%    \item Bos is an object storage compatible with amazon s3, using erasure code to replicate data.
+%    \item Built a data read/write proxy that recover data if data chunk is not available 
+%\end{itemize}
+%}
+
+\cventry{2017.2--2018.8}
+{media-server}
+{live streaming service}
+{Baidu}
+{}
 {
 \begin{itemize}
-\item Position: Linux C++ intern software engineer\\
-I was involved in the architecture design and implementation of back-end services. I learned many other valuable things other than technical skills, e.g., how to cooperate with others, what is important in work and so on.
+    \item \url{https://github.com/brpc/media-server}
+    \item Built a media-server based on brpc used in Live Streaming Service of Baidu Cloud.
+    \item Supported origin server mode, edge server mode and rtmp/flv/hls protocol.
+    \item Deployed and monitored media-server on Baidu's global CDN with 10K+ machines.
+    \item Wrote a test framework to assure quality, finding more problems(80\%) in testing stage.
 \end{itemize}
 }
 
-\section{Project Experience}
-%% \subsection{Research Projects}
-\cventry{2015--now}
+\cventry{2018.12--2019.6}
+{A/B test platform}
+{Bilibili}
+{}
+{}
+{
+\begin{itemize}
+    \item Built a c++ high-performant sdk that uses user's profile to generate experiment flags.
+    \item Supported user-defined function using antlr to enable filtering.
+    \item Showed the ultimate results using grafana, illustrating the metric(such as CTR) and confidence interval(to what extent we can believe the result).
+\end{itemize}
+}
+
+\cventry{2015.1--2017.2}
 {Zaver}
 {yet another fast and efficient HTTP server}
-{open source project}
+{personal project}
 {}
 {
 \begin{itemize}
-    \item project link: \url{https://github.com/zyearn/zaver}
+    \item \url{https://github.com/zyearn/zaver}
+    \item Built a project to help developers understand how to write a high-performant server in Linux.
+    \item Used as few codes as possible to demonstrate the core structure of server like Nginx.
+    \item Helped developers lay a solid foundation for further study in network programming(The blog article has 100K+ views).
 \end{itemize}
-The purpose of Zaver is to help developers understand how to write a high performance server based on epoll. Although Nginx is a good learning example, its complexity and huge code base make people discouraged. Zaver uses as few codes as possible to demonstrate the core structure of high performance server like Nginx. Developers can lay a solid foundation by learning Zaver for further study in network programming.
 }
-\vspace*{0.2\baselineskip}
+%\vspace*{0.2\baselineskip}
 
-\cventry{2015.12--2016.3}
-{JOS}
-{an OS kernel}
-{course project}
-{}
-{
-\begin{itemize}
-    \item project link: \url{https://github.com/zyearn/6.828-labs}
-\end{itemize}
-This is the lab project of MIT6.828, in which students will write a small Exokernel. In this project, I implemented a kernel supporting memory management, process, exception/interrupt, syscall, page fault, multi-core support, scheduler, COWfork, preemptive kernel, IPC, file system, network and other basic features.
-}
-\vspace*{0.2\baselineskip}
+%\cventry{2015.12--2016.3}
+%{JOS}
+%{an OS kernel}
+%{course project}
+%{}
+%{
+%\begin{itemize}
+%    \item project link: \url{https://github.com/zyearn/6.828-labs}
+%\end{itemize}
+%This is the lab project of MIT6.828, in which students will write a small Exokernel. In this project, I implemented a kernel supporting memory management, process, exception/interrupt, syscall, page fault, multi-core support, scheduler, COWfork, preemptive kernel, IPC, file system, network and other basic features.
+%}
+%\vspace*{0.2\baselineskip}
 
-\cventry{2015.6-2015.9}
-{A small game server system}
-{tencent intern project}
-{}
-{}
-{
-This project is designed for intern engineers to get start in game server programming. I implemented a system supporting user login, simple user interactions, user logout and user data persistency. The difficult part is how to design a reliable and fault-tolerant back-end system.
-}
-\vspace*{0.2\baselineskip}
-
-\cventry{2014.10-2014.12}
-{CE Online}
-{HTML, JavaScript, NodeJs, Express, Mysql}
-{outsourcing Project}
-{}
-{
-\begin{itemize}
-    \item project link: \url{http://ece114.com}
-\end{itemize}
-This project aimed at writing a portal website of electron component for a startup team. In the back end, we use NodeJS framework, Express, which is suitable for I/O intensive task. We use Mysql as our database. My job involves part of front-end development and back-end development.
-}
-\vspace*{0.2\baselineskip}
-
-\cventry{2012.10-2012.12}
-{A Compiler for SmallC}
-{C, Flex, Yacc, Recursive-Descent Parser}
-{Course Project}
-{}
-{
-\begin{itemize}
-    \item project link: \url{https://github.com/zyearn/SmallC}
-\end{itemize}
-This project involves the whole process how advanced language are compiled into assembly language.
-I use Flex to do lexical analysis, Yacc to do syntax analysis and generate target code(x86) using recursive-descent method.
-}
+%\cventry{2015.6-2015.9}
+%{A small game server system}
+%{tencent intern project}
+%{}
+%{}
+%{
+%This project is designed for intern engineers to get start in game server programming. I implemented a system supporting user login, simple user interactions, user logout and user data persistency. The difficult part is how to design a reliable and fault-tolerant back-end system.
+%}
+%\vspace*{0.2\baselineskip}
+%
+%\cventry{2014.10-2014.12}
+%{CE Online}
+%{HTML, JavaScript, NodeJs, Express, Mysql}
+%{outsourcing Project}
+%{}
+%{
+%\begin{itemize}
+%    \item project link: \url{http://ece114.com}
+%\end{itemize}
+%This project aimed at writing a portal website of electron component for a startup team. In the back end, we use NodeJS framework, Express, which is suitable for I/O intensive task. We use Mysql as our database. My job involves part of front-end development and back-end development.
+%}
+%\vspace*{0.2\baselineskip}
+%
+%\cventry{2012.10-2012.12}
+%{A Compiler for SmallC}
+%{C, Flex, Yacc, Recursive-Descent Parser}
+%{Course Project}
+%{}
+%{
+%\begin{itemize}
+%    \item project link: \url{https://github.com/zyearn/SmallC}
+%\end{itemize}
+%This project involves the whole process how advanced language are compiled into assembly language.
+%I use Flex to do lexical analysis, Yacc to do syntax analysis and generate target code(x86) using recursive-descent method.
+%}
 
 %\vspace*{0.2\baselineskip}
 %\cventry{2013.12--2014.2}
@@ -196,21 +291,41 @@ I use Flex to do lexical analysis, Yacc to do syntax analysis and generate targe
 %Here is the ppt demo when I did my presentation: \url{http://zjsblog.com/others/OSreport.pdf}\\
 %}
 
+\section{Publications}
+
+\cventry{2016}
+{Wamalloc: An efficient wear-aware allocator for non-volatile memory}
+{\textbf{Zhu Jiashun}, Li Sumin and Huang Linpeng. In 2016 IEEE 22nd International Conference on Parallel and Distributed Systems (ICPADS)}
+{}
+{}
+{
+\begin{itemize}
+    \item \url{https://github.com/zyearn/TCNVMalloc}
+\end{itemize}
+}
+\cventry{2019}
+{LiwePMS: A Lightweight Persistent Memory with Wear-aware Memory Management}
+{Li Sumin, Huang Kaixin, Huang Linpeng and \textbf{Zhu Jiashun}. In ACM Journal on Emerging Technologies in Computing Systems (JETC)}
+{}
+{}
+{}
+
+
 \section{Awards}
 \cventry{2015}{Shanghai JiaoTong University scholarship}{}{}{}{}
 \cventry{2014}{Shanghai JiaoTong University scholarship}{}{}{}{}
 \cventry{2013}{Shanghai JiaoTong University scholarship}{}{}{}{}
-\cventry{2013}{First prize in CCF Hackathon at Shanghai JiaoTong University}{}{}{}{}
+%\cventry{2013}{First prize in CCF Hackathon at Shanghai JiaoTong University}{}{}{}{}
 \cventry{2011}{Shanghai JiaoTong University scholarship}{}{}{}{}
 
-\section{Standardized Test}
-\cventry{CET 6}{559}{}{}{}{}
+%\section{Standardized Test}
+%\cventry{CET 6}{559}{}{}{}{}
 
+%\section{Skills}
+%\cventry{Language}{C, C++, Go, SQL, Python, Shell}{}{}{}{}
+%\cventry{Tools}{Skilled in Git, vim, MacOSX/Linux}{}{}{}{}
+%\cventry{Others}{Skilled in critical thinking, logic, and high math}{}{}{}{}
 
-\section{Skills}
-\cventry{Language/Platform}{C, C++, Go, NodeJS/JavaScript, SQL, Python, Shell}{}{}{}{}
-\cventry{Document}{LaTex, Vim}{}{}{}{}
-\cventry{Tools}{Git, MacOSX/Linux}{}{}{}{}
 %\cventry{Games}{Warcraft 3}{}{}{}{}
 
 % \closesection{}                   % needed to renewcommands
